@@ -1,15 +1,16 @@
 from django.shortcuts import render
+from .models import Usuario
 
 def home(request):
-    return render(request,'dados/home.html')
+    return render(request,'usuarios/home.html')
 
-def funcionarios(request):
-    novo_funcionario = funcionarios()
-    novo_funcionario.funcionarios = request.POST.get('Funcionarios')
-    novo_funcionario.save()
+def usuarios(request):
+    novo_usuario = Usuario()
+    novo_usuario.funcionarios = request.POST.get('funcionarios')
+    novo_usuario.save()
 
-    funcionarios = {
-        'funcionarios': funcionarios.objects.all()
+    usuarios = {
+        'usuarios': Usuario.objects.all()
     }
 
-    return render(request,'dados/usuarios.html',funcionarios)
+    return render(request,'usuarios/usuarios.html',usuarios)
