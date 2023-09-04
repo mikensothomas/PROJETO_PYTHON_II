@@ -5,11 +5,19 @@
         <tr>
             <th>id</th>
             <th>Funcionarios</th>
+            <th>Clientes</th>
+            <th>Fornecedores</th>
+            <th>Produtos</th>
+            <th>Empresa_terceiras</th>
         </tr>
         {% for usuario in usuarios %}
         <tr>
             <td>{{usuario.id}}</td>
             <td>{{usuario.funcionarios}}</td>
+            <td>{{usuario.clientes}}</td>
+            <td>{{usuario.fornecedores}}</td>
+            <td>{{usuario.produtos}}</td>
+            <td>{{usuario.empresas_terceiras}}</td>
         </tr>
         {% endfor %}
     </table>
