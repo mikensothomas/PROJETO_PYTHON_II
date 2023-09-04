@@ -10,17 +10,16 @@
     <title>Projeto de informática</title>
   </head>
   <body>
-    
-    <form method="post">
         <nav style="background-color: aquamarine !important; text-align: center;">
             <div class="container-fluid">
               <span class="navbar-brand mb-0 h1">MINHA EMPRESA</span>
             </div>
         </nav>
           
-          <br></div>
+      <form action="{% url 'listagem' %}" method="post">
+        {% csrf_token %}
           <div style="position: absolute; left: 43%; top: 14%;">
-            Funcionario <input style="width: 100px;" type="number">
+            Funcionarios <input name="Funcionarios" style="width: 100px;" type="number">
           </div>
           <br></br>
           <br></div>
@@ -41,7 +40,7 @@
           <br></div>
     
           <div style="position: absolute; left: 43%; top: 45%;">
-            Fornecedor <input style="width: 100px;" type="number">
+            Fornecedores <input style="width: 100px;" type="number">
           </div>
           <br></div>
           <div style="position: absolute; left: 43%; top: 51%;">
@@ -61,7 +60,7 @@
           <br></div>
     
           <div style="position: absolute; left: 43%; top: 75%;">
-            Empresa terceira <input style="width: 100px;" type="number">
+            Empresas terceiras <input style="width: 100px;" type="number">
           </div>
           <br></div>
           <div style="position: absolute; left: 43%; top: 81%;">
