@@ -5,12 +5,12 @@
       <form action="{% url 'listagem' %}" method="post">
         {% csrf_token %}
           <div style="position: absolute; left: 43%; top: 14%;">
-            Funcionarios <input name="funcionarios" style="width: 100px;" type="number">
+            Funcionarios: <input name="funcionarios" style="width: 100px;" type="number">
           </div>
           <br></br>
           <br></div>
           <div style="position: absolute; left: 43%; top: 20%;">
-            <button type="button" name="bt1mais" value="Incrementar">Aumentar</button>
+            <button type="button" name="bt1mais" value="Incrementar" onclick="debug(event)">Aumentar</button>
             <button type="button" name="bt1menos">Diminuir</button>
           </div>
           <br></div>
