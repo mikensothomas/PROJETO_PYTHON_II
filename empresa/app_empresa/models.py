@@ -7,3 +7,9 @@ class Usuario(models.Model):
     fornecedores = models.IntegerField(blank=True, null=True)
     produtos = models.IntegerField(blank=True, null=True)
     empresas_terceiras = models.IntegerField(blank=True, null=True)
+
+
+def aumentar(self):
+        valor = models.IntegerField(default=0)
+        self.valor += 1
+        self.save()

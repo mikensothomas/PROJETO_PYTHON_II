@@ -1,6 +1,8 @@
 
       {% extends 'usuarios/base.html' %}
       {% block conteudo %}    
+
+    <div class="mb-3">
       <form action="{% url 'listagem' %}" method="post">
         {% csrf_token %}
           <div style="position: absolute; left: 43%; top: 14%;">
@@ -9,21 +11,21 @@
           <br></br>
           <br></div>
           <div style="position: absolute; left: 43%; top: 20%;">
-            <button type="button" class="bt1mais">Aumentar</button>
-            <button type="button" class="bt1menos">Diminuir</button>
+            <button type="button" name="bt1mais" value="Incrementar">Aumentar</button>
+            <button type="button" name="bt1menos">Diminuir</button>
           </div>
           <br></div>
     
-          <div style="position: absolute; left: 43%; top: 30%;">
-            Clientes <input name="clientes" style="width: 100px;" type="number">
-          </div>
-          <br></div>
-          <div style="position: absolute; left: 43%; top: 36%;">
-            <button type="button" class="bt2mais">Aumentar</button>
-            <button type="button" class="bt2menos">Diminuir</button>
-          </div>
-          <br></div>
-    
+            <div style="position: absolute; left: 43%; top: 30%;">
+              Clientes <input name="clientes" style="width: 100px;" type="number">
+            </div>
+            <br></div>
+            <div style="position: absolute; left: 43%; top: 36%;">
+              <button type="button" class="bt2mais">Aumentar</button>
+              <button type="button" class="bt2menos">Diminuir</button>
+            </div>
+            <br></div>
+      
           <div style="position: absolute; left: 43%; top: 45%;">
             Fornecedores <input name="fornecedores" style="width: 100px;" type="number">
           </div>
@@ -56,4 +58,5 @@
     
           <button style="position: absolute; left: 43%; top: 89%;">Salvar</button>
     </form>
+  </div>
     {% endblock %}
