@@ -2,7 +2,6 @@
       {% extends 'usuarios/base.html' %}
       {% block conteudo %}    
 
-    <div class="mb-3">
       <form action="{% url 'listagem' %}" method="post">
         {% csrf_token %}
           <div style="position: absolute; left: 43%; top: 14%;">
@@ -58,5 +57,4 @@
     
           <button style="position: absolute; left: 43%; top: 89%;">Salvar</button>
     </form>
-  </div>
     {% endblock %}
